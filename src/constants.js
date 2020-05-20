@@ -66,6 +66,7 @@ const data = [{
   "is_valid": () => {
     return true
   },
+  "has_label": true,
   "conditional": {
     "name": "date_of_birth",
     "show_if": (value) => {

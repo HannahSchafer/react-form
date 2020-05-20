@@ -46,7 +46,7 @@ class Form extends Component {
             if (!datum.conditional || datum.conditional.show_if(this.state.date_of_birth)) {
               return (
                 <div key={index}>
-                  <label>{datum.type === 'checkbox' ? datum.human_label : ''}</label>
+                { datum.has_label ? <label>{datum.human_label}</label> : '' }
                   {' '}
                   <input
                     name={datum.name}
