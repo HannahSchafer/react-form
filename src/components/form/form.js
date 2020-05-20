@@ -18,13 +18,24 @@ class Form extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+    let validForm = true;
 
-    const payload = JSON.stringify(this.state)
-    console.log('JSON payload', payload)
+    for (var i = 0; i < data.length; i++) {
+      const value = this.state[data[i].name];
+      if (!data[i].is_valid(value)) {
+        const label = data[i].human_label;
+        alert(`${value} is not a valid ${label}`)
+        validForm = false;
+      }
+    }
 
-    // axios.post('/', payload).then((result) => {
-    //   // process the result
-    // });
+    if (validForm) {
+      const payload = JSON.stringify(this.state)
+      console.log('payload', payload)
+      // axios.post('/', payload).then((result) => {
+      //   // process the result
+      // });
+    }
   }
 
   render() {
@@ -35,17 +46,24 @@ class Form extends Component {
             if (!datum.conditional || datum.conditional.show_if(this.state.date_of_birth)) {
               return (
                 <div key={index}>
-                  <label>{datum.human_label}</label>
+                  <label>{datum.type === 'checkbox' ? datum.human_label : ''}</label>
                   {' '}
                   <input
-                    type={datum.type}
                     name={datum.name}
-                    onChange={this.handleChange}/>
+                    onChange={this.handleChange}
+                    placeholder={datum.human_label}
+                    required={datum.required}
+                    type={datum.type}
+                  />
                 </div>
               )}
             })
           }
-          <input type="submit" value="Submit" className="hi ui inverted button" />
+          <input
+            className="ui inverted button"
+            type="submit"
+            value="Submit"
+          />
         </form>
       </div>
     );
