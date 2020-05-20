@@ -4,7 +4,7 @@
 #### Relevant Files:
 1. constants.js --> contains data configuration, including new 'required', 'is_valid', and 'has_label' properties
 2. components/form/form.js --> component containing form logic and rendering
-3. components/form/form.css --> styles to override out-of-the-box Semantic UI class styling
+3. components/form/form.css --> styles to override out-of-the-box Semantic UI styling
 4. components/form/form.spec.js --> contains rendering test
 
 ### `yarn start`
