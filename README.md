@@ -1,6 +1,10 @@
 
 ## Form Project Details
 
+#### Technologies:
+1. `create-react-app` (React, Babel, Webpack, Jest)
+2. axios (for future use with `post` request)
+
 #### Relevant Files:
 1. src/constants.js --> contains data configuration, including new 'required', 'is_valid', and 'has_label' properties
 2. src/components/form/form.js --> component containing form logic and rendering
