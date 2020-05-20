@@ -1,8 +1,8 @@
 const data = [{
   "tag": "input",
-	"name": "first_name",
+  "name": "first_name",
   "type": "text",
-	"human_label": "First Name",
+  "human_label": "First Name",
   "required": true,
   "is_valid": () => {
     return true
@@ -11,7 +11,7 @@ const data = [{
   "tag": "input",
   "name": "last_name",
   "type": "text",
-	"human_label": "Last Name",
+  "human_label": "Last Name",
   "required": true,
   "is_valid": () => {
     return true
@@ -66,9 +66,9 @@ const data = [{
   "is_valid": () => {
     return true
   },
-	"conditional": {
-		"name": "date_of_birth",
-		"show_if": (value) => {
+  "conditional": {
+    "name": "date_of_birth",
+    "show_if": (value) => {
       const now = new Date();
       const valueDate = new Date(value);
       return valueDate >= new Date(now.getFullYear() - 13, now.getMonth(), now.getDate()) && value !== null;
