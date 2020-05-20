@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../../constants.js'
 // import axios from 'axios';
+import './form.css';
 
 
 class Form extends Component {
@@ -28,7 +29,7 @@ class Form extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ui form">
         <form onSubmit={this.handleSubmit}>
           { data.map((datum, index) => {
             if (!datum.conditional || datum.conditional.show_if(this.state.date_of_birth)) {
@@ -44,7 +45,7 @@ class Form extends Component {
               )}
             })
           }
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" className="hi ui inverted button" />
         </form>
       </div>
     );

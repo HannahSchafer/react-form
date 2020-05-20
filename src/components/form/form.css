@@ -1,0 +1,9 @@
+
+.ui.form input[type="checkbox"],
+.ui.form textarea {
+	vertical-align: baseline;
+}
+
+.ui.inverted.button {
+	margin-top: 20px;
+}
