@@ -1,6 +1,12 @@
 
 ## Form Project Details
 
+#### Relevant Files:
+1. constants.js --> contains data configuration, including new 'required', 'is_valid', and 'has_label' properties
+2. form.js --> component containing form logic and rendering
+3. form.css --> styles to override out-of-the-box Semantic UI class styling
+4. form.spec.js --> contains rendering test
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
